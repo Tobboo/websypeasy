@@ -1,0 +1,29 @@
+/* -------------------------------------------------- */
+/*    BUTTON MIXIN
+/* -------------------------------------------------- */
+
+@mixin button{
+  padding: s(1) s(2);
+  display: inline-block;
+  //width: 100%;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  transition: all .3s ease(out-sine);
+
+  &:focus:not(:disabled) {
+    box-shadow: 0 0 15px rgba($c-black, 100);
+  }
+
+  &:disabled {
+    color: $c-black;
+    background-color: transparent;
+    border-color: $c-white;
+    cursor: not-allowed;
+  }
+}
