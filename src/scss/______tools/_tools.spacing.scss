@@ -1,0 +1,13 @@
+/* -------------------------------------------------- */
+/*    SPACING Function
+/*    Example: padding: s(1);
+/* -------------------------------------------------- */
+
+@function space($key) {
+  @return (($gutterWidth * $key) + 0rem);
+}
+
+// Shorthand Version
+@function s($key) {
+  @return space($key);
+}
