@@ -1,0 +1,23 @@
+/* -------------------------------------------------- */
+/*    FONTSIZES
+/* -------------------------------------------------- */
+
+$fontSize:              16px;
+$fontSize-min:          16px;
+$lineHeight-base:       1.2;
+$lineHeight-base-px:    $fontSize-min * $lineHeight-base + 0px;
+
+// Font Map
+
+$fontsizes: (
+  "small":            12px,
+  "medium":           14px,
+  "base":             16px,
+  "h1":               48px,
+  "h2":               36px,
+  "h3":               32px,
+  "h4":               24px,
+  "h5":               18px,
+  "h6":               12px,
+  "big":              30px,
+)
