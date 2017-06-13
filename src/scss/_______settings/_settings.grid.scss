@@ -1,0 +1,48 @@
+/* -------------------------------------------------- */
+/*    GRID Settings
+/* -------------------------------------------------- */
+
+// BASE FONT SIZE HAS TO BE 16px
+
+$pixelGridSize:         .5rem; // How much Pixels do you want (8px)
+$columns:               12; // Set Column Numbers
+$columnWidth:           7.5rem; // How wide is one Column (120px)
+$gutterWidth:           1rem; // How much ist the Gutter on each Side
+$pixelGrid:             true;
+
+/*--------------------------------------------------
+    #DON'T EDIT BELOW HERE
+  --------------------------------------------------*/
+
+// Check Pixel Grid Settings and round up to the next possible Value
+@if $pixelGrid {
+
+  // Round Numbers
+  $roundWidth:   round($columnWidth / $pixelGridSize);
+  $roundGutter:  round($gutterWidth / $pixelGridSize);
+
+  // Check if the Numbers are equal
+  $checkWidth:   $roundWidth != $columnWidth / $pixelGridSize;
+  $checkGutter:  $roundGutter != $gutterWidth / $pixelGridSize;
+
+  @if $checkWidth or $checkGutter {
+
+    $columnWidth:  $roundWidth * $pixelGridSize;
+    $gutterWidth:  $roundGutter * $pixelGridSize;
+
+  } @else {
+
+    $columnWidth:  $columnWidth;
+    $gutterWidth:  $gutterWidth
+
+  }
+
+} @else {
+
+  $columnWidth:  $columnWidth;
+  $gutterWidth:  $gutterWidth
+
+}
+
+// Set max-width
+$maxWidth: $columnWidth * $columns;
