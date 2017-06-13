@@ -1,0 +1,13 @@
+/* -------------------------------------------------- */
+/*    Max Width Gutter Generator
+/* -------------------------------------------------- */
+
+@mixin max-width-gutter($key: 1) {
+  $gutting: (($gutterWidth * $key) * 2) + 0rem;
+  max-width: calc(100% - #{$gutting});
+}
+
+// Shorthand Version
+@mixin mwg($args...) {
+  @include max-width-gutter($args...);
+}
